@@ -1,4 +1,4 @@
-import { app, BrowserWindow, Menu, crashReporter, shell, autoUpdater } from 'electron'
+import { app, BrowserWindow, Menu, shell, autoUpdater } from 'electron'
 const { version } = require('./package.json')
 import open from 'open'
 
@@ -55,6 +55,7 @@ app.on('window-all-closed', () => {
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
     'show': false,
+    'resizable': false,
     'width': 295,
     'height': 435,
     'title-bar-style': 'hidden',
